@@ -9,7 +9,7 @@
 <h2>Lunches for the week</h2>
 
 <p>
-    
+
 </p>
 <table class="table">
     <thead>
@@ -33,29 +33,31 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Meals) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Week)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dayofweek)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MealName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cost)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.MealsId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.MealsId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.MealsId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Meals)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Week)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dayofweek)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MealName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colour)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.MealsId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.MealsId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.MealsId">Delete</a>
+                </td>
+            </tr>
+        }  
     </tbody>
 </table>
+

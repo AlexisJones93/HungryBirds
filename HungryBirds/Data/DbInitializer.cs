@@ -47,6 +47,21 @@ namespace HungryBirds.Data
                 context.Parent.Add(s);
             }
             context.SaveChanges();
+
+            var Meals = new Meals[]
+            {
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Monday", Colour="Red"},
+            new Meals { MealName = "Cheese Pizza", Dayofweek ="Monday", Colour="Green" },
+            new Meals { MealName = "Jacket Potato",Dayofweek ="Monday",Colour="Yellow" },
+            new Meals { MealName = "Packed Lunch",Dayofweek ="Monday", Colour="Blue" },
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Tuesday", Colour="Red"},
+
+            };
+            foreach (Meals i in Meals)
+            {
+                context.Meals.Add(i);
+            }
+            context.SaveChanges();
         }
     }
 
