@@ -29,9 +29,28 @@ namespace HungryBirds.Data
                 context.Student.Add(s);
             }
             context.SaveChanges();
+
+            
+            if (context.Parent.Any())
+            {
+                return;   
+            }
+
+            var Parents = new Parent[]
+            {
+            new Parent{FirstName="Alexis",LastName="Jones",Address= "3 School way, SL2 9LJ", Email= "21406612@bucks.ac.uk"},
+          
+
+            };
+            foreach (Parent s in Parents)
+            {
+                context.Parent.Add(s);
+            }
+            context.SaveChanges();
         }
-
-
     }
+
+
+    
     
 }
