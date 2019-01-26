@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using HungryBirds.Models;
 
 namespace HungryBirds.Data
 {
@@ -13,5 +14,7 @@ namespace HungryBirds.Data
         {
             // test
         }
+        public DbSet<HungryBirds.Models.Meals> Meals { get; set; }
+        
     }
 }

@@ -11,7 +11,6 @@ namespace HungryBirds.Models
         public int Week { get; set; }
         public String Dayofweek { get; set; }
         public String MealName { get; set; }
-        public Boolean Chosenmeal { get; set; }
         public string Colour { get; set; }
         public int Cost { get; set; }
 

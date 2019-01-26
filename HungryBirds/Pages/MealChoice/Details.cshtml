@@ -1,0 +1,50 @@
+﻿@page
+@model HungryBirds.Pages.MealChoice.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meals</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Meals.Week)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meals.Week)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Meals.Dayofweek)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meals.Dayofweek)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Meals.MealName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meals.MealName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Meals.Colour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meals.Colour)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Meals.Cost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meals.Cost)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Meals.MealsId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
