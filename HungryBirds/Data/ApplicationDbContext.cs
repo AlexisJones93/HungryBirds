@@ -15,6 +15,7 @@ namespace HungryBirds.Data
             // test
         }
         public DbSet<HungryBirds.Models.Meals> Meals { get; set; }
+        public DbSet<HungryBirds.Models.Student> Student { get; set; }
         
     }
 }
