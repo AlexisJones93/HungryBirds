@@ -4,14 +4,16 @@ using HungryBirds.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HungryBirds.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190126124311_Accountpage")]
+    partial class Accountpage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,17 +63,6 @@ namespace HungryBirds.Data.Migrations
                     b.HasKey("ParentId");
 
                     b.ToTable("Parent");
-                });
-
-            modelBuilder.Entity("HungryBirds.Models.Selection", b =>
-                {
-                    b.Property<int>("SelectionId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.HasKey("SelectionId");
-
-                    b.ToTable("Selection");
                 });
 
             modelBuilder.Entity("HungryBirds.Models.Student", b =>

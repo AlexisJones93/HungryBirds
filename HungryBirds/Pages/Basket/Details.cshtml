@@ -1,0 +1,20 @@
+﻿@page
+@model HungryBirds.Pages.Basket.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Selection</h4>
+    <hr />
+    <dl class="dl-horizontal">
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Selection.SelectionId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
