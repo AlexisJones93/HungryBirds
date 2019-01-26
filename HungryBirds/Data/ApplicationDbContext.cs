@@ -11,6 +11,7 @@ namespace HungryBirds.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+            // test
         }
     }
 }
