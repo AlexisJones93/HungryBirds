@@ -19,11 +19,7 @@ namespace HungryBirds.Pages.MealChoice
             _context = context;
         }
 
-        public IActionResult OnGet()
-        {
-            return Page();
-        }
-
+        
         [BindProperty]
         public Meals Meals { get; set; }
 

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using HungryBirds.Data;
 using HungryBirds.Models;
+using HungryBirds.Data;
+using System;
 
 namespace HungryBirds.Pages.MealChoice
 {
@@ -23,7 +22,10 @@ namespace HungryBirds.Pages.MealChoice
 
         public async Task OnGetAsync()
         {
-            Meals = await _context.Meals.ToListAsync();
+            Meals= await _context.Meals.ToListAsync();
         }
+       
+
+       
     }
 }
