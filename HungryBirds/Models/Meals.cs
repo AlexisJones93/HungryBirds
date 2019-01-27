@@ -9,7 +9,7 @@ namespace HungryBirds.Models
     {
         public int MealsId { get; set; }
         public int Week { get; set; }
-        public string Dayofweek { get; set; }
+        public int Dayofweek { get; set; }
         public string MealName { get; set; }
         public string Colour { get; set; }
         public int Cost { get; set; }
