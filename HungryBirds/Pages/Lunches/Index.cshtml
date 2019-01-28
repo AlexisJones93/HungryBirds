@@ -6,14 +6,17 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Basket</h2>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Create New Meal Choice</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Selection[0].StudentId)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Selection[0].MondayId)
             </th>
@@ -29,15 +32,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Selection[0].FridayId)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Selection[0].StudentId)
-            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Selection) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MondayId)
             </td>
@@ -53,12 +56,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.FridayId)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentId)
-            </td>
+            
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.SelectionId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.SelectionId">Details</a> |
+                <!----> <a asp-page="./Details" asp-route-id="@item.SelectionId">Details</a> <!---->
                 <a asp-page="./Delete" asp-route-id="@item.SelectionId">Delete</a>
             </td>
         </tr>

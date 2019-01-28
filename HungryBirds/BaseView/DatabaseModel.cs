@@ -11,6 +11,7 @@ namespace HungryBirds.DatabaseModel //test
     { 
         public SelectList StudentSL { get; set; }
     public SelectList MondayMeal { get; set; }
+        public SelectList AccountSL { get; set; }
 
         public void PopulateStudentNameDropDownList(ApplicationDbContext _context, object selectedStudent = null)
         {
@@ -28,7 +29,13 @@ namespace HungryBirds.DatabaseModel //test
 
 
         }
-        
+        public void PopulateAccountNameDropDownList(ApplicationDbContext _context, object selectedAccount = null)
+        {
+            var AccountQuery = from d in _context.Parent
+                               orderby d.FirstName
+                               select d;
+            AccountSL = new SelectList(AccountQuery.AsNoTracking(), "FirstName", "FirstName", selectedAccount);
+        }
 
 
     }

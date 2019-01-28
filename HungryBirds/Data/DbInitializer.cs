@@ -38,7 +38,7 @@ namespace HungryBirds.Data
 
             var Parents = new Parent[]
             {
-            new Parent{FirstName="Alexis",LastName="Jones",Address= "3 School way, SL2 9LJ", Email= "21406612@bucks.ac.uk"},
+            new Parent{FirstName="Alexis",LastName="Jones",Address= "3 School way, SL2 9LJ", Email= "21406612@bucks.ac.uk",AccountBalance=10},
           
 
             };

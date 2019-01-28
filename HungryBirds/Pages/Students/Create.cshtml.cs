@@ -7,11 +7,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using HungryBirds.Data;
 using HungryBirds.Models;
-using HungryBirds.DatabaseModel;
 
 namespace HungryBirds.Pages.Students
 {
-    public class CreateModel : DatabaseModel0
+    public class CreateModel : PageModel
     {
         private readonly HungryBirds.Data.ApplicationDbContext _context;
 
@@ -22,7 +21,6 @@ namespace HungryBirds.Pages.Students
 
         public IActionResult OnGet()
         {
-            PopulateStudentNameDropDownList(_context);
             return Page();
         }
 

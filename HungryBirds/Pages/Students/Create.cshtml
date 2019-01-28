@@ -3,7 +3,7 @@
 
 @{
     ViewData["Title"] = "Create";
-   
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <h2>Create</h2>
@@ -17,9 +17,6 @@
             <div class="form-group">
                 <label asp-for="Student.FirstMidName" class="control-label"></label>
                 <input asp-for="Student.FirstMidName" class="form-control" />
-                <select asp-for="Student.FirstMidName"class=" form-control" asp-items="@Model.StudentSL">
-                 <option value=" "> Student First Name</option>
-</select>
                 <span asp-validation-for="Student.FirstMidName" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -28,18 +25,33 @@
                 <span asp-validation-for="Student.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Student.YearGroup" class="control-label"></label>
-                <input asp-for="Student.YearGroup" class="form-control" />
-                <span asp-validation-for="Student.YearGroup" class="text-danger"></span>
+                <label asp-for="Student.DateOfBirth" class="control-label"></label>
+                <input asp-for="Student.DateOfBirth" class="form-control" />
+                <span asp-validation-for="Student.DateOfBirth" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="Student.School" class="control-label"></label>
                 <input asp-for="Student.School" class="form-control" />
                 <span asp-validation-for="Student.School" class="text-danger"></span>
             </div>
-
-            
+            <div class="form-group">
+                <label asp-for="Student.YearGroup" class="control-label"></label>
+                <input asp-for="Student.YearGroup" class="form-control" />
+                <span asp-validation-for="Student.YearGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Class" class="control-label"></label>
+                <input asp-for="Student.Class" class="form-control" />
+                <span asp-validation-for="Student.Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Allergies" class="control-label"></label>
+                <input asp-for="Student.Allergies" class="form-control" />
+                <span asp-validation-for="Student.Allergies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
         </form>
     </div>
 </div>
