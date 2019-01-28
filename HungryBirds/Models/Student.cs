@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,5 +16,8 @@ namespace HungryBirds.Models
         public string YearGroup { get; set; }
         public string Class { get; set; }
         public string Allergies { get; set; }
+
+        [ForeignKey("ParentId")]
+        public int ParentId { get; set; }
     }
 }
