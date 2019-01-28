@@ -17,7 +17,7 @@ namespace HungryBirds.Models
         public string Class { get; set; }
         public string Allergies { get; set; }
 
-        [ForeignKey("ParentId")]
-        public int ParentId { get; set; }
+        //[ForeignKey("ParentId")]
+       // public int ParentId { get; set; }
     }
 }

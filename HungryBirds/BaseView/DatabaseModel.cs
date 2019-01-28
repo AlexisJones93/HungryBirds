@@ -17,14 +17,14 @@ namespace HungryBirds.DatabaseModel //test
             var StudentQuery = from d in _context.Student
                                  orderby d.FirstMidName
                                  select d;
-            StudentSL = new SelectList(StudentQuery.AsNoTracking(), "StudentID", "FirstMidName", selectedStudent);
+            StudentSL = new SelectList(StudentQuery.AsNoTracking(), "FirstMidName", "FirstMidName", selectedStudent);
         }
         public void PopMondayMealDDP(ApplicationDbContext _context, object SelectedMonday = null)
         {
             var MondayQyer = from d in _context.Meals
                              orderby d.MealName
                              select d;
-            MondayMeal = new SelectList(MondayQyer.AsNoTracking(), "MealsId", "MealName", SelectedMonday);
+            MondayMeal = new SelectList(MondayQyer.AsNoTracking(), "MealName", "MealName", SelectedMonday);
 
 
         }
