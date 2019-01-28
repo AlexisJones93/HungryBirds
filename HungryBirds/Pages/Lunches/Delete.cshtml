@@ -1,0 +1,59 @@
+﻿@page
+@model HungryBirds.Pages.Lunches.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Selection</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.MondayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.MondayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.TuesdayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.TuesdayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.WednesdayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.WednesdayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.ThuesdayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.ThuesdayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.FridayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.FridayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.StudentId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.StudentId)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Selection.SelectionId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

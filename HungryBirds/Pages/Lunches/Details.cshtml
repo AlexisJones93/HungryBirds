@@ -1,0 +1,56 @@
+﻿@page
+@model HungryBirds.Pages.Lunches.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Selection</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.MondayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.MondayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.TuesdayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.TuesdayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.WednesdayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.WednesdayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.ThuesdayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.ThuesdayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.FridayId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.FridayId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection.StudentId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Selection.StudentId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Selection.SelectionId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
