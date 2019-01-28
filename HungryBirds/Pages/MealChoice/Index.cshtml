@@ -1,61 +1,48 @@
 ﻿@page
 @model HungryBirds.Pages.MealChoice.IndexModel
 
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <h2>Lunches for the week</h2>
+<br />
+<br />
 
-<p>
-    
-</p>
 <table class="table">
     <thead>
+        <tr><p>Monday</p></tr>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Meals[0].Week)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meals[0].Dayofweek)
-            </th>
-            <th>
+
                 @Html.DisplayNameFor(model => model.Meals[0].MealName)
+
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Meals[0].Colour)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Meals[0].Cost)
-            </th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Meals) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Week)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dayofweek)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MealName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cost)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.MealsId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.MealsId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.MealsId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Meals)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.MealName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colour)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(model => model.Meals[0].Selected)
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+

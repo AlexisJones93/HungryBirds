@@ -12,7 +12,7 @@ namespace HungryBirds.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            // test
+            // Right version!
         }
         public DbSet<HungryBirds.Models.Meals> Meals { get; set; }
         public DbSet<HungryBirds.Models.Student> Student { get; set; }

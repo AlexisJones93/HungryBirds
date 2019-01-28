@@ -47,6 +47,38 @@ namespace HungryBirds.Data
                 context.Parent.Add(s);
             }
             context.SaveChanges();
+
+            
+            var Meal = new Meals[]
+            {
+            new Meals { MealName = "Fish and Chips", Dayofweek="Monday", Colour="Red"},
+            new Meals { MealName = "Cheese Pizza", Dayofweek ="Monday", Colour="Green" },
+            new Meals { MealName = "Jacket Potato",Dayofweek ="Monday",Colour="Yellow" },
+            new Meals { MealName = "Packed Lunch",Dayofweek ="Monday", Colour="Blue" },
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Tuesday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Tuesday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Tuesday", Colour="Red"},
+            new Meals { MealName = "Packed Lunch", Dayofweek ="Tuesday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Wednesday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Wednesday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Wednesday", Colour="Red"},
+            new Meals { MealName = "Packed Lunch", Dayofweek ="Wednesday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Thursday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Thursday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Thursday", Colour="Red"},
+            new Meals { MealName = "Packed Lunch", Dayofweek ="Thursday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Friday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Friday", Colour="Red"},
+            new Meals { MealName = "Fish and Chips", Dayofweek ="Friday", Colour="Red"},
+            new Meals { MealName = "Packed Lunch", Dayofweek ="Friday", Colour="Red"},
+            };
+            foreach (Meals i in Meal)
+            {
+                context.Meals.Add(i);
+            }
+            context.SaveChanges();
+
+           
         }
     }
 
