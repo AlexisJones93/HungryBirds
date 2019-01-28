@@ -15,6 +15,7 @@
     <thead>
         <tr><p>Monday</p></tr>
         <tr>
+           
             <th>
 
                 @Html.DisplayNameFor(model => model.Meals[0].MealName)
@@ -23,25 +24,29 @@
             <th>
                 @Html.DisplayNameFor(model => model.Meals[0].Colour)
             </th>
-
+            <th>
+                @Html.DisplayNameFor(model => model.Meals[0].Dayofweek)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.Meals)
         {
-            <tr>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.MealName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Colour)
-                </td>
-                <td>
-                    @Html.CheckBoxFor(model => model.Meals[0].Selected)
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colour)
+            </td>
+            <th>
+                @Html.DisplayFor(model => item.Dayofweek)
+            </th>
+            <td>
+                @Html.CheckBoxFor(model => item.Selected)
+            </td>
+        </tr>
         }
     </tbody>
 </table>

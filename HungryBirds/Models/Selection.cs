@@ -12,11 +12,16 @@ namespace HungryBirds.Models
         [Key]
         public int SelectionId { get; set; }
 
-        [ForeignKey("MealId")]
-        public string MealId { get; set; }
+       public int MondayId { get; set; }
 
-        [ForeignKey("AccountId")]
-        public string AccountId { get; set; }
+        public int TuesdayId { get; set; }
+        public int WednesdayId { get; set; }
+        public int ThuesdayId { get; set; }
+        public int FridayId { get; set; }
+
+
+        public int StudentId { get; set; }
+        
 
     }
 }

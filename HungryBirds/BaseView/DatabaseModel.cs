@@ -7,7 +7,7 @@ using HungryBirds.Data;
 
 namespace HungryBirds.DatabaseModel
 {
-    public class DatabaseModel:PageModel
+    public class DatabaseModel0 : PageModel
     { 
         public SelectList StudentSL { get; set; }
     

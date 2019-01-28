@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using HungryBirds.Models;
 using HungryBirds.Data;
 using System;
+using System.Linq;
 
 namespace HungryBirds.Pages.MealChoice
 {
@@ -18,11 +19,18 @@ namespace HungryBirds.Pages.MealChoice
             _context = context;
         }
 
-        public IList<Meals> Meals { get;set; }
+        public List<Meals> Meals { get;set; }
+
+        
 
         public async Task OnGetAsync()
         {
-            Meals= await _context.Meals.ToListAsync();
+            IQueryable<Meals> MealQ = from s in _context.Meals
+                                      select s;
+            MealQ = MealQ.OrderBy(s => s.Dayofweek);
+            // Meals = await _context.Meals.ToListAsync();
+            // MealQ =  await MealQ.ToListAsync();
+            Meals = await MealQ.ToListAsync();
         }
        
 
