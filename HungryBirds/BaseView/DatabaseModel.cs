@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using HungryBirds.Data;
 
-namespace HungryBirds.DatabaseModel
+namespace HungryBirds.DatabaseModel //test
 {
     public class DatabaseModel0 : PageModel
     { 
