@@ -8,10 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HungryBirds.Data;
 using HungryBirds.Models;
+using HungryBirds.DatabaseModel;
 
 namespace HungryBirds.Pages.Lunches
 {
-    public class EditModel : PageModel
+    public class EditModel : DatabaseModel0
     {
         private readonly HungryBirds.Data.ApplicationDbContext _context;
 
@@ -23,8 +24,12 @@ namespace HungryBirds.Pages.Lunches
         [BindProperty]
         public Selection Selection { get; set; }
 
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            PopulateStudentNameDropDownList(_context);
+            PopMondayMealDDP(_context);
+
             if (id == null)
             {
                 return NotFound();

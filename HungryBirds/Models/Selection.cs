@@ -12,11 +12,15 @@ namespace HungryBirds.Models
         [Key]
         public int SelectionId { get; set; }
 
-       public String MondayId { get; set; }
-
+        [Display(Name = "Monday")]
+        public String MondayId { get; set; }
+        [Display(Name = "Tuesday")]
         public String TuesdayId { get; set; }
+        [Display(Name = "Wednesday")]
         public String WednesdayId { get; set; }
+        [Display(Name = "Thursday")]
         public String ThuesdayId { get; set; }
+        [Display(Name = "Friday")]
         public String FridayId { get; set; }
 
         [Display (Name= "Student Name")]
