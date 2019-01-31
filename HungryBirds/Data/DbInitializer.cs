@@ -54,13 +54,13 @@ namespace HungryBirds.Data
             new Meals { MealName = "Fish and Chips", Dayofweek= Meals.DType.Monday, Colour="Red"},
             new Meals { MealName = "Cheese Pizza", Dayofweek =Meals.DType.Monday, Colour="Green" },
             new Meals { MealName = "Jacket Potato",Dayofweek =Meals.DType.Monday,Colour="Yellow" },
-            new Meals { MealName = "Packed Lunch",Dayofweek =Meals.DType.Monday, Colour="Blue" },
-            new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Tuesday, Colour="Red"},
-            new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Tuesday, Colour="Red"},
-            new Meals { MealName = "Fish and Chips", Dayofweek = Meals.DType.Tuesday, Colour="Red"},
-            new Meals { MealName = "Packed Lunch", Dayofweek =Meals.DType.Tuesday, Colour="Red"},
-            new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Wednesday, Colour="Red"},
-            new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Wednesday, Colour="Red"},
+            new Meals { MealName = "Chicken Korma",Dayofweek =Meals.DType.Monday, Colour="Blue" },
+            new Meals { MealName = "Cheese and ham toastie", Dayofweek =Meals.DType.Tuesday, Colour="Red"},
+            new Meals { MealName = "Chicken Pita", Dayofweek =Meals.DType.Tuesday, Colour="Red"},
+            new Meals { MealName = "Tomato soup", Dayofweek = Meals.DType.Tuesday, Colour="Red"},
+            new Meals { MealName = "Hunters chicken", Dayofweek =Meals.DType.Tuesday, Colour="Red"},
+            new Meals { MealName = "Packed Lunch", Dayofweek =Meals.DType.Wednesday, Colour="Red"},
+           /*  new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Wednesday, Colour="Red"},
             new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Wednesday, Colour="Red"},
             new Meals { MealName = "Packed Lunch", Dayofweek =Meals.DType.Wednesday, Colour="Red"},
             new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Thursday, Colour="Red"},
@@ -70,7 +70,7 @@ namespace HungryBirds.Data
             new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Friday, Colour="Red"},
             new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Friday, Colour="Red"},
             new Meals { MealName = "Fish and Chips", Dayofweek =Meals.DType.Friday, Colour="Red"},
-            new Meals { MealName = "Packed Lunch", Dayofweek =Meals.DType.Friday, Colour="Red"},
+            new Meals { MealName = "Packed Lunch", Dayofweek =Meals.DType.Friday, Colour="Red"}, */
             };
             foreach (Meals i in Meal)
             {
