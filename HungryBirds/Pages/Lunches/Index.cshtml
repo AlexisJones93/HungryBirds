@@ -36,33 +36,39 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Selection) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MondayId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TuesdayId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WednesdayId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ThuesdayId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FridayId)
-            </td>
-            
-            <td>
-                
-                <a asp-page="./Delete" asp-route-id="@item.SelectionId">Delete</a>|
-                <a asp-page="./Edit" asp-route-id="@item.SelectionId">Edit</a>|
-            </td>
-        </tr>
-}
+
+        @foreach (var item in Model.Selection)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MondayId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TuesdayId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WednesdayId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThuesdayId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FridayId)
+                </td>
+
+                <td>
+
+                    <a asp-page="./Delete" asp-route-id="@item.SelectionId">Delete</a>|
+                    <a asp-page="./Edit" asp-route-id="@item.SelectionId">Edit</a>|
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<a class="btn btn-default" href="Lunches">
+    Pay
+</a>
+
